@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Special Shop – খাঁটি খাবার, ঘরে পৌঁছে</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap">
+<style>
+:root{--bg:#f6f8f3;--sf:#fff;--ink:#1d2a1f;--mute:#657565;--line:#dfe6d9;--g:#2e7d32;--g2:#e8f3e5;--on:#fff;--or:#f57c00;--red:#d32f2f;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1710;--sf:#17221a;--ink:#e6f0e4;--mute:#9bb09a;--line:#2a3b2c;--g:#43a047;--g2:#1b2b1d;--or:#ffa040;--red:#ef6c6c;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f1710;--sf:#17221a;--ink:#e6f0e4;--mute:#9bb09a;--line:#2a3b2c;--g:#43a047;--g2:#1b2b1d;--or:#ffa040;--red:#ef6c6c;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Hind Siliguri",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.5}
+.w{max-width:1140px;margin:0 auto;padding:0 16px}
+button{font:inherit;cursor:pointer}
+button:focus-visible,input:focus-visible,textarea:focus-visible,a:focus-visible{outline:3px solid var(--or);outline-offset:2px}
+.top{background:var(--g);color:#fff;font-size:.85rem;padding:6px 0}
+.top .w{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--sf);border-bottom:1px solid var(--line)}
+.hd{display:flex;align-items:center;gap:12px;padding:10px 0}
+.logo{font-weight:700;font-size:1.4rem;color:var(--g);white-space:nowrap}
+.logo b{color:var(--or)}
+.sr{flex:1;display:flex}
+.sr input{flex:1;min-width:0;padding:10px 14px;border:2px solid var(--g);border-right:0;border-radius:8px 0 0 8px;background:var(--bg);color:var(--ink);font:inherit}
+.sr span{background:var(--g);color:#fff;padding:10px 16px;border-radius:0 8px 8px 0}
+.cb{background:var(--g2);color:var(--g);border:1px solid var(--g);border-radius:8px;padding:9px 14px;font-weight:600;white-space:nowrap}
+nav{display:flex;gap:6px;overflow-x:auto;padding-bottom:10px}
+nav button{white-space:nowrap;border:0;background:none;color:var(--ink);padding:6px 12px;border-radius:6px;font-weight:500}
+nav button[aria-pressed=true]{background:var(--g);color:#fff}
+.hero{display:grid;grid-template-columns:2fr 1fr;gap:14px;margin:18px 0}
+.ban{background:linear-gradient(120deg,#2e7d32,#66a94b);color:#fff;border-radius:14px;padding:34px 28px;display:flex;flex-direction:column;justify-content:center;gap:8px;min-height:200px}
+.ban h1{margin:0;font-size:clamp(1.6rem,4.5vw,2.5rem);line-height:1.2}
+.ban p{margin:0 0 8px;opacity:.95}
+.ban button{align-self:flex-start;background:var(--or);color:#1c1000;border:0;border-radius:8px;padding:10px 20px;font-weight:700}
+.side{display:grid;gap:14px}
+.side div{background:var(--sf);border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;gap:12px;align-items:center}
+.side i{font-size:2rem;font-style:normal}
+.side small{color:var(--mute);display:block}
+h2.t{font-size:1.3rem;margin:26px 0 12px;border-left:5px solid var(--or);padding-left:10px}
+.cats{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px}
+.cats button{background:var(--sf);border:1px solid var(--line);border-radius:12px;padding:14px 6px;color:var(--ink);display:flex;flex-direction:column;align-items:center;gap:4px}
+.cats i{font-size:1.9rem;font-style:normal}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:14px}
+.card{background:var(--sf);border:1px solid var(--line);border-radius:12px;overflow:hidden;position:relative;display:flex;flex-direction:column}
+.pic{font-size:3.4rem;text-align:center;padding:22px 0;background:var(--g2)}
+.bd{position:absolute;top:8px;left:8px;background:var(--red);color:#fff;font-size:.75rem;font-weight:700;padding:2px 8px;border-radius:12px}
+.in{padding:10px 12px 12px;display:flex;flex-direction:column;gap:2px;flex:1}
+.in h3{margin:0;font-size:.98rem;line-height:1.3}
+.in small{color:var(--mute)}
+.pr{margin-top:6px;font-weight:700;color:var(--g);font-size:1.1rem}
+.pr s{color:var(--mute);font-weight:400;font-size:.85rem;margin-left:6px}
+.ab{margin-top:auto;background:var(--g);color:#fff;border:0;border-radius:8px;padding:8px;font-weight:600}
+.pf{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:32px 0}
+.pf div{background:var(--sf);border:1px solid var(--line);border-radius:12px;padding:14px;color:var(--mute);font-size:.92rem}
+.pf b{display:block;color:var(--ink)}
+footer{background:var(--g);color:#fff;padding:22px 0;font-size:.9rem;margin-top:20px}
+#dr{position:fixed;top:0;right:0;bottom:0;width:min(400px,100%);background:var(--sf);border-left:1px solid var(--line);transform:translateX(100%);transition:transform .25s;z-index:10;display:flex;flex-direction:column;padding:calc(14px + env(safe-area-inset-top,0px)) 16px calc(14px + env(safe-area-inset-bottom,0px));overflow:auto}
+#dr.o{transform:none}
+#dr h2{margin:0 0 8px;display:flex;justify-content:space-between;align-items:center}
+.x{background:none;border:0;color:var(--ink);font-size:1.6rem}
+.ln{display:flex;gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line)}
+.ln .n{flex:1;font-size:.95rem}
+.qt button{width:28px;height:28px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:6px}
+.tot{display:flex;justify-content:space-between;font-weight:700;font-size:1.1rem;padding:10px 0}
+#dr input,#dr textarea{width:100%;margin-bottom:8px;padding:9px 11px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);font:inherit}
+.ord{background:var(--or);color:#1c1000;border:0;border-radius:8px;padding:12px;font-weight:700;width:100%}
+#msg{padding:10px 0;color:var(--g);font-weight:600}
+@media(max-width:700px){.hero{grid-template-columns:1fr}.side{grid-template-columns:1fr 1fr}.side div{flex-direction:column;text-align:center}.hd{flex-wrap:wrap}.sr{order:3;flex-basis:100%}.logo{margin-right:auto}}
+</style>
+</head>
+<body>
+<div class="top"><div class="w"><span>৯৯৯ টাকার উপরে অর্ডারে ফ্রি ডেলিভারি</span><span>হটলাইন: ০১৭৫৯-৩৭৬২৫৬</span></div></div>
+<header><div class="w">
+<div class="hd">
+<div class="logo">Special <b>Shop</b></div>
+<div class="sr"><input type="search" id="q" placeholder="পণ্য খুঁজুন, যেমন: মধু, ঘি, খেজুর" aria-label="পণ্য খুঁজুন"><span aria-hidden="true">🔍</span></div>
+<button class="cb" id="op">🛒 কার্ট (<span id="cn">0</span>)</button>
+</div>
+<nav id="nav"></nav>
+</div></header>
+
+<main class="w">
+<section class="hero">
+<div class="ban"><h1>খাঁটি খাবার, সরাসরি আপনার ঘরে</h1><p>মধু, ঘি, তেল, মসলা ও খেজুর। ক্যাশ অন ডেলিভারিতে সারা বাংলাদেশে।</p><button onclick="document.getElementById('pd').scrollIntoView({behavior:'smooth'})">এখনই কিনুন</button></div>
+<div class="side"><div><i>🚚</i><span><b>দ্রুত ডেলিভারি</b><small>২–৫ দিনের মধ্যে</small></span></div><div><i>💵</i><span><b>ক্যাশ অন ডেলিভারি</b><small>পণ্য হাতে পেয়ে টাকা দিন</small></span></div></div>
+</section>
+
+<h2 class="t">ক্যাটাগরি</h2>
+<div class="cats" id="cats"></div>
+
+<h2 class="t" id="pd">জনপ্রিয় পণ্য</h2>
+<div class="grid" id="gr"></div>
+
+<section class="pf">
+<div><b>১০০% খাঁটি</b>ভেজালমুক্ত পণ্যের নিশ্চয়তা।</div>
+<div><b>সহজ রিটার্ন</b>ভুল বা নষ্ট পণ্য ৭ দিনে বদল।</div>
+<div><b>নিরাপদ অর্ডার</b>ফোনে কনফার্ম করে পাঠানো হয়।</div>
+</section>
+</main>
+<footer><div class="w">© ২০২৬ Special Shop। সর্বস্বত্ব সংরক্ষিত।</div></footer>
+
+<aside id="dr" aria-label="শপিং কার্ট">
+<h2>আপনার কার্ট <button class="x" id="cl" aria-label="কার্ট বন্ধ করুন">×</button></h2>
+<div id="it"></div>
+<div class="tot"><span>মোট</span><span id="tt">৳০</span></div>
+<input id="nm" placeholder="আপনার নাম" aria-label="নাম" autocomplete="name">
+<input id="ph" placeholder="মোবাইল নম্বর" aria-label="মোবাইল নম্বর" inputmode="tel" autocomplete="tel">
+<textarea id="ad" rows="2" placeholder="পূর্ণ ঠিকানা" aria-label="ঠিকানা"></textarea>
+<button class="ord" id="od">অর্ডার কনফার্ম করুন (ক্যাশ অন ডেলিভারি)</button>
+<div id="msg" role="status"></div>
+</aside>
+
+<script>
+var C=[{k:"সব",e:"🛍️"},{k:"মধু",e:"🍯"},{k:"তেল ও ঘি",e:"🧈"},{k:"মসলা",e:"🌶️"},{k:"খেজুর ও বাদাম",e:"🌰"},{k:"চা",e:"🍵"}];
+var P=[
+{id:1,n:"খাঁটি সরিষা ফুলের মধু",w:"৫০০ গ্রাম",c:"মধু",p:650,o:750,e:"🍯"},
+{id:2,n:"সুন্দরবনের খলিসা মধু",w:"১ কেজি",c:"মধু",p:1250,o:1400,e:"🍯"},
+{id:3,n:"গাওয়া ঘি",w:"৫০০ গ্রাম",c:"তেল ও ঘি",p:980,o:1100,e:"🧈"},
+{id:4,n:"কাঠের ঘানি সরিষার তেল",w:"৫ লিটার",c:"তেল ও ঘি",p:1150,o:1250,e:"🫒"},
+{id:5,n:"হলুদ গুঁড়া",w:"২০০ গ্রাম",c:"মসলা",p:140,o:170,e:"🌶️"},
+{id:6,n:"মরিচ গুঁড়া",w:"২০০ গ্রাম",c:"মসলা",p:180,o:210,e:"🌶️"},
+{id:7,n:"সৌদি আজওয়া খেজুর",w:"১ কেজি",c:"খেজুর ও বাদাম",p:1450,o:1650,e:"🌴"},
+{id:8,n:"মিক্সড নাটস",w:"৫০০ গ্রাম",c:"খেজুর ও বাদাম",p:890,o:990,e:"🌰"},
+{id:9,n:"সিলেটের অর্গানিক চা",w:"৪০০ গ্রাম",c:"চা",p:420,o:480,e:"🍵"}
+];
+var cat="সব",cart={},$=function(i){return document.getElementById(i)};
+var bn=function(n){return Number(n).toLocaleString("bn-BD")};
+var tk=function(n){return "৳"+bn(n)};
+function bar(){
+ $("nav").innerHTML=C.map(function(c){return '<button aria-pressed="'+(c.k===cat)+'" data-c="'+c.k+'">'+c.k+'</button>'}).join("");
+ $("cats").innerHTML=C.slice(1).map(function(c){return '<button data-c="'+c.k+'"><i aria-hidden="true">'+c.e+'</i>'+c.k+'</button>'}).join("");
+}
+function grid(){
+ var q=$("q").value.trim();
+ var l=P.filter(function(x){return (cat==="সব"||x.c===cat)&&(x.n+x.c).indexOf(q)>-1});
+ $("gr").innerHTML=l.length?l.map(function(x){var d=Math.round((x.o-x.p)/x.o*100);
+  return '<div class="card"><span class="bd">'+bn(d)+'% ছাড়</span><div class="pic" aria-hidden="true">'+x.e+'</div><div class="in"><h3>'+x.n+'</h3><small>'+x.w+'</small><div class="pr">'+tk(x.p)+'<s>'+tk(x.o)+'</s></div><button class="ab" data-id="'+x.id+'">কার্টে যোগ করুন</button></div></div>'}).join(""):'<p>কোনো পণ্য পাওয়া যায়নি। অন্য নামে খুঁজুন।</p>';
+}
+function draw(){
+ var ids=Object.keys(cart),t=0,n=0;
+ $("it").innerHTML=ids.length?ids.map(function(i){var x=P.filter(function(y){return y.id==i})[0],q=cart[i];t+=x.p*q;n+=q;
+  return '<div class="ln"><span aria-hidden="true">'+x.e+'</span><div class="n">'+x.n+'<br><small>'+x.w+' · '+tk(x.p)+'</small></div><div class="qt"><button data-d="-1" data-id="'+i+'" aria-label="কমান">−</button> '+bn(q)+' <button data-d="1" data-id="'+i+'" aria-label="বাড়ান">+</button></div></div>'}).join(""):'<p>কার্ট খালি। পণ্য যোগ করে শুরু করুন।</p>';
+ $("tt").textContent=tk(t);$("cn").textContent=bn(n);
+}
+function pick(e){var c=e.target.closest("[data-c]");if(c){cat=c.dataset.c;bar();grid();$("pd").scrollIntoView({behavior:"smooth"})}}
+$("nav").onclick=pick;$("cats").onclick=pick;$("q").oninput=grid;
+$("gr").onclick=function(e){var i=e.target.dataset.id;if(i){cart[i]=(cart[i]||0)+1;$("msg").textContent="";draw();$("dr").classList.add("o")}};
+$("it").onclick=function(e){var i=e.target.dataset.id;if(i){cart[i]+=+e.target.dataset.d;if(cart[i]<1)delete cart[i];draw()}};
+$("op").onclick=function(){$("dr").classList.add("o")};
+$("cl").onclick=function(){$("dr").classList.remove("o")};
+$("od").onclick=function(){
+ if(!Object.keys(cart).length){$("msg").textContent="আগে কার্টে পণ্য যোগ করুন।";return}
+ if(!$("nm").value.trim()||!$("ph").value.trim()||!$("ad").value.trim()){$("msg").textContent="নাম, মোবাইল নম্বর ও ঠিকানা দিন।";return}
+ cart={};draw();$("msg").textContent="অর্ডার গ্রহণ করা হয়েছে। কনফার্ম করতে আমরা ফোন করব।";
+};
+bar();grid();draw();
+</script>
+</body>
+</html>
